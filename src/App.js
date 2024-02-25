@@ -4,10 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Budget from './components/Budget';
 import Remaining from './components/Remaining';
-
-import { AppProvider } from './context/AppContext';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
+import AllocationForm from './components/AllocationForm';
+
+import { AppProvider } from './context/AppContext';
+
 const App = () => {
     return (
         <AppProvider>
@@ -26,7 +28,7 @@ const App = () => {
                         <ExpenseTotal />
                     </div>                 
                 </div>
-                
+
                 <h3 className='mt-3'>Allocation</h3>
                 <div className='row '>
                     <div className='col-sm'>
@@ -34,9 +36,12 @@ const App = () => {
                     </div>
                 </div>
 
-                    {
-                        /* Add AllocationForm component here under */
-                    }        
+                <h3 className='mt-3'>Change allocation</h3>
+                <div className='row mt-3'>
+                    <div className='col-sm'>
+                        <AllocationForm />
+                    </div>
+                </div>  
             </div>
         </AppProvider>
     );
